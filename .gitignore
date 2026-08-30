@@ -1,0 +1,52 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+auth.json
+*.pem
+*.key
+
+# PHP dependencies and local tools
+/vendor/
+/composer.phar
+/.phpunit.cache/
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/coverage/
+
+# JavaScript dependencies and test output
+/node_modules/
+/.npm/
+/playwright-report/
+/test-results/
+
+# CodeIgniter runtime data
+/writable/cache/**
+/writable/debugbar/**
+/writable/logs/**
+/writable/session/**
+/writable/uploads/**
+/writable/private/**
+!/writable/**/.gitkeep
+
+# Private operational files
+/storage/private/**
+/storage/imports/**
+/storage/exports/**
+/storage/reports/**
+/storage/backups/**
+!/storage/**/.gitkeep
+*.sql.gz
+*.dump
+
+# Temporary bootstrap workspace
+/ci4-bootstrap/
+
+# Editors and operating systems
+/.idea/
+/.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
