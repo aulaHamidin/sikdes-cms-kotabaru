@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Component Gallery — SIKDES Kota Baru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class='skip-link' href='#main-content'>Lewati ke konten utama</a>
+    <div class='app-shell' data-screen-id='DEV-COMPONENT-GALLERY'>
+        <aside class='sidebar' id='app-sidebar' aria-label='Navigasi component gallery'>
+            <div class='brand'>
+                <img src='../../assets/images/logo-desa.png' alt='Logo Desa Kota Baru' width='48' height='54'>
+                <div><strong>SIKDES</strong><span>Desa Kota Baru</span></div>
+                <button class='icon-button sidebar-close' id='sidebar-close' type='button' aria-label='Tutup navigasi'><span aria-hidden='true'>×</span></button>
+            </div>
+            <nav class='side-nav' aria-label='Bagian gallery'>
+                <a class='active' href='#overview' aria-current='page'><span aria-hidden='true'>⌂</span> Ringkasan</a>
+                <a href='#tokens'><span aria-hidden='true'>◫</span> Token visual</a>
+                <a href='#actions'><span aria-hidden='true'>●</span> Tombol & status</a>
+                <a href='#forms'><span aria-hidden='true'>▤</span> Form</a>
+                <a href='#data'><span aria-hidden='true'>▦</span> Data & filter</a>
+                <a href='#dashboard'><span aria-hidden='true'>▥</span> Dashboard</a>
+                <a href='#states'><span aria-hidden='true'>◇</span> State</a>
+                <a href='#overlays'><span aria-hidden='true'>□</span> Overlay</a>
+            </nav>
+            <div class='sidebar-footer'><span class='status-dot' aria-hidden='true'></span><span>Environment development</span></div>
+        </aside>
+        <div class='drawer-backdrop' id='drawer-backdrop' hidden></div>
+        <div class='app-column'>
+            <header class='topbar'>
+                <button class='icon-button menu-trigger' id='sidebar-open' type='button' aria-controls='app-sidebar' aria-expanded='false' aria-label='Buka navigasi'><span aria-hidden='true'>☰</span></button>
+                <div class='topbar-context'><span class='eyebrow'>Development only</span><span class='topbar-title'>Component Gallery</span></div>
+                <div class='topbar-actions'>
+                    <button class='icon-button notification-button' type='button' aria-label='Notifikasi, 2 belum dibaca'><span aria-hidden='true'>♢</span><span class='notification-count'>2</span></button>
+                    <button class='account-button' type='button' aria-label='Menu akun Admin Desa'><span class='avatar' aria-hidden='true'>AD</span><span class='account-copy'><strong>Admin Desa</strong><small>Administrator</small></span></button>
+                </div>
+            </header>
+            <main id='main-content' tabindex='-1'>
+                <section class='page-header' id='overview' aria-labelledby='gallery-title'>
+                    <div>
+                        <nav class='breadcrumb' aria-label='Breadcrumb'><a href='#overview'>Development</a><span aria-hidden='true'>/</span><span aria-current='page'>Component Gallery</span></nav>
+                        <p class='eyebrow'>UI_UX_SPEC v1.1.1</p>
+                        <h1 id='gallery-title'>Komponen global SIKDES</h1>
+                        <p>Prototipe lokal untuk menguji pola visual, state, responsive behavior, dan interaksi keyboard sebelum view modul dibuat.</p>
+                    </div>
+                    <div class='page-actions'><button class='button secondary' type='button' id='toast-trigger'>Tampilkan toast</button><button class='button primary' type='button' id='modal-trigger'>Buka konfirmasi</button></div>
+                </section>
+
+                <div class='alert info' role='status'><span class='alert-icon' aria-hidden='true'>i</span><div><strong>Gallery tidak memakai data nyata.</strong><p>Semua nilai bersifat contoh generik dan tidak mewakili NIK, nomor KK, atau credential.</p></div></div>
+
+                <section class='gallery-section' id='tokens' aria-labelledby='tokens-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Foundation</p><h2 id='tokens-title'>Token visual</h2></div><span class='section-note'>Tanpa gradient</span></div>
+                    <div class='color-grid'>
+                        <article class='color-card'><span class='swatch primary-swatch'></span><strong>Primary</strong><code>#0504FF</code></article>
+                        <article class='color-card'><span class='swatch accent-swatch'></span><strong>Accent</strong><code>#FFF000</code></article>
+                        <article class='color-card'><span class='swatch success-swatch'></span><strong>Success</strong><code>#339967</code></article>
+                        <article class='color-card'><span class='swatch danger-swatch'></span><strong>Danger</strong><code>#FE0000</code></article>
+                        <article class='color-card'><span class='swatch canvas-swatch'></span><strong>Canvas</strong><code>#F8FAFC</code></article>
+                        <article class='color-card'><span class='swatch text-swatch'></span><strong>Text</strong><code>#0F172A</code></article>
+                    </div>
+                    <div class='type-sample surface-card'><div><span class='eyebrow'>Judul halaman · 28/34</span><p class='display-sample'>Data yang jelas dan dapat diaudit</p></div><div><span class='eyebrow'>Body · 16/24</span><p>Setiap informasi mempunyai konteks, status, dan tindakan yang mudah dipahami.</p></div></div>
+                </section>
+
+                <section class='gallery-section' id='actions' aria-labelledby='actions-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Actions</p><h2 id='actions-title'>Tombol dan status</h2></div></div>
+                    <div class='surface-card stack-lg'>
+                        <div class='button-row' aria-label='Varian tombol'>
+                            <button class='button primary' type='button'>Simpan perubahan</button><button class='button secondary' type='button'>Kembali</button><button class='button ghost' type='button'>Pratinjau</button><button class='button danger' type='button'>Nonaktifkan</button><button class='button primary' type='button' disabled>Disabled</button><button class='button secondary' id='loading-trigger' type='button'>Uji loading</button>
+                        </div>
+                        <div class='badge-row' aria-label='Status domain'>
+                            <span class='badge success'><span aria-hidden='true'>●</span> Aktif</span><span class='badge neutral'><span aria-hidden='true'>●</span> Nonaktif</span><span class='badge warning'><span aria-hidden='true'>◷</span> Menunggu</span><span class='badge primary'><span aria-hidden='true'>↻</span> Diproses</span><span class='badge danger'><span aria-hidden='true'>!</span> Gagal</span><span class='badge info'><span aria-hidden='true'>✓</span> Dipublikasikan</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class='gallery-section' id='forms' aria-labelledby='forms-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Input</p><h2 id='forms-title'>Form dan validasi</h2></div><span class='section-note'>Label selalu terlihat</span></div>
+                    <div class='form-layout'>
+                        <form class='surface-card form-card' action='#forms' novalidate>
+                            <div class='error-summary' tabindex='-1' aria-labelledby='error-title'>
+                                <strong id='error-title'>Periksa kembali isian berikut</strong>
+                                <ul><li><a href='#resident-name'>Nama lengkap wajib diisi.</a></li><li><a href='#district'>Pilih kecamatan dari hasil pencarian.</a></li></ul>
+                            </div>
+                            <p class='required-note'>Field bertanda <span>(wajib)</span> harus diisi.</p>
+                            <div class='field-grid'>
+                                <div class='field invalid'>
+                                    <label for='resident-name'>Nama lengkap <span>(wajib)</span></label>
+                                    <input id='resident-name' name='resident_name' aria-invalid='true' aria-describedby='resident-help resident-error'>
+                                    <small id='resident-help'>Tulis sesuai dokumen kependudukan.</small><small class='field-error' id='resident-error'>Nama lengkap wajib diisi.</small>
+                                </div>
+                                <div class='field'><label for='birth-date'>Tanggal lahir <span>(wajib)</span></label><input id='birth-date' name='birth_date' type='date'><small>Gunakan tanggal yang tercantum pada dokumen.</small></div>
+                                <div class='field'><label for='district'>Kecamatan <span>(wajib)</span></label><div class='select-shell'><input id='district' name='district' value='Martapura' aria-describedby='district-help'><span aria-hidden='true'>⌄</span></div><small id='district-help'>Pencarian relasi memakai debounce dan maksimum 20 hasil.</small></div>
+                                <div class='field'><label for='status'>Status penduduk <span>(wajib)</span></label><select id='status' name='status'><option>Aktif</option><option>Pindah</option><option>Meninggal</option></select></div>
+                            </div>
+                            <div class='field'><label for='notes'>Catatan</label><textarea id='notes' name='notes' rows='4' placeholder='Tambahkan keterangan bila diperlukan'></textarea><small>Maksimum 1.000 karakter.</small></div>
+                            <div class='form-actions'><button class='button primary' type='button'>Simpan perubahan</button><button class='button secondary' type='button'>Batal</button></div>
+                        </form>
+
+                        <aside class='surface-card upload-card' aria-labelledby='upload-title'>
+                            <p class='eyebrow'>FILE-UPLOAD</p><h3 id='upload-title'>Dokumen pendukung</h3>
+                            <p>PDF, JPEG, atau PNG. Maksimum 5 MiB. File diperiksa berdasarkan signature dan disimpan privat.</p>
+                            <label class='drop-zone' for='support-file'><span class='upload-icon' aria-hidden='true'>⇧</span><strong>Pilih file</strong><span>atau letakkan file di area ini</span></label>
+                            <input class='visually-hidden' id='support-file' type='file' accept='.pdf,.jpg,.jpeg,.png'>
+                            <div class='file-row'><span class='file-icon' aria-hidden='true'>▤</span><div><strong>dokumen-contoh.pdf</strong><small>1,2 MiB · Siap diunggah</small></div><button class='icon-button' type='button' aria-label='Hapus dokumen-contoh.pdf'>×</button></div>
+                        </aside>
+                    </div>
+                </section>
+
+                <section class='gallery-section' id='data' aria-labelledby='data-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Server-side</p><h2 id='data-title'>Filter dan tabel data</h2></div><button class='button secondary filter-mobile-trigger' id='filter-trigger' type='button' aria-controls='filter-drawer' aria-expanded='false'>Filter <span class='count-pill'>2</span></button></div>
+                    <div class='surface-card data-card'>
+                        <div class='filter-bar' aria-label='Filter data penduduk'>
+                            <div class='field compact'><label for='search'>Cari penduduk</label><input id='search' type='search' placeholder='Nama, NIK lengkap, atau nomor KK'></div>
+                            <div class='field compact'><label for='resident-status'>Status</label><select id='resident-status'><option>Aktif</option><option>Pindah</option><option>Meninggal</option></select></div>
+                            <div class='field compact'><label for='resident-rt'>RT</label><select id='resident-rt'><option>Semua RT</option><option>RT 001</option><option>RT 002</option></select></div>
+                            <div class='filter-actions'><button class='button primary' type='button'>Terapkan</button><button class='button ghost' type='button'>Reset</button></div>
+                        </div>
+                        <div class='active-filters' aria-label='Filter aktif'><span>Filter aktif:</span><button type='button'>Status: Aktif <span aria-hidden='true'>×</span></button><button type='button'>Belum Masuk KK <span aria-hidden='true'>×</span></button></div>
+                        <div class='table-wrap' tabindex='0' role='region' aria-label='Daftar penduduk, dapat digulir horizontal'>
+                            <table>
+                                <caption class='visually-hidden'>Daftar contoh penduduk aktif</caption>
+                                <thead><tr><th scope='col' aria-sort='ascending'>Nama</th><th scope='col'>Jenis kelamin</th><th scope='col'>RT/RW</th><th scope='col'>Status KK</th><th scope='col'>Status</th><th scope='col'><span class='visually-hidden'>Aksi</span></th></tr></thead>
+                                <tbody>
+                                    <tr tabindex='0' data-href='#data'><td><strong>Contoh Penduduk A</strong><small>Identitas terlindungi</small></td><td>Perempuan</td><td>001/002</td><td>Belum Masuk KK</td><td><span class='badge success'><span aria-hidden='true'>●</span> Aktif</span></td><td><button class='button ghost small' type='button'>Edit</button></td></tr>
+                                    <tr tabindex='0' data-href='#data'><td><strong>Contoh Penduduk B</strong><small>Identitas terlindungi</small></td><td>Laki-laki</td><td>002/001</td><td>Anggota</td><td><span class='badge success'><span aria-hidden='true'>●</span> Aktif</span></td><td><button class='button ghost small' type='button'>Edit</button></td></tr>
+                                    <tr tabindex='0' data-href='#data'><td><strong>Contoh Penduduk C</strong><small>Identitas terlindungi</small></td><td>Perempuan</td><td>003/001</td><td>Kepala keluarga</td><td><span class='badge success'><span aria-hidden='true'>●</span> Aktif</span></td><td><button class='button ghost small' type='button'>Edit</button></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='pagination'><p>Menampilkan 1–3 dari 357 data</p><nav aria-label='Pagination tabel'><button class='icon-button' type='button' disabled aria-label='Halaman sebelumnya'>‹</button><button class='page-number active' type='button' aria-current='page'>1</button><button class='page-number' type='button'>2</button><button class='page-number' type='button'>3</button><button class='icon-button' type='button' aria-label='Halaman berikutnya'>›</button></nav></div>
+                    </div>
+                </section>
+
+                <section class='gallery-section' id='dashboard' aria-labelledby='dashboard-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Dashboard</p><h2 id='dashboard-title'>Metrik, grafik, dan context card</h2></div><span class='section-note'>Data contoh non-PII</span></div>
+                    <div class='metric-grid'>
+                        <article class='metric-card'><span class='metric-icon primary-icon' aria-hidden='true'>♙</span><p>Penduduk aktif</p><strong>9.842</strong><small>Kondisi saat ini</small></article>
+                        <article class='metric-card'><span class='metric-icon success-icon' aria-hidden='true'>⌂</span><p>KK aktif</p><strong>2.615</strong><small>Termasuk KK aktif kosong</small></article>
+                        <article class='metric-card'><span class='metric-icon primary-icon' aria-hidden='true'>♂</span><p>Laki-laki aktif</p><strong>4.921</strong><small>50,0% penduduk aktif</small></article>
+                        <article class='metric-card'><span class='metric-icon accent-icon' aria-hidden='true'>♀</span><p>Perempuan aktif</p><strong>4.921</strong><small>50,0% penduduk aktif</small></article>
+                    </div>
+                    <div class='dashboard-grid'>
+                        <article class='surface-card chart-card'>
+                            <div class='card-heading'><div><p class='eyebrow'>Perubahan bulan berjalan</p><h3>Aktivitas kependudukan</h3></div><button class='button ghost small' type='button'>Lihat tabel</button></div>
+                            <div class='bar-chart' role='img' aria-label='Grafik contoh: tambah 42, pindah 12, meninggal 5, pulihkan 3'>
+                                <div class='bar-item'><span class='bar-value'>42</span><span class='bar bar-1'></span><small>Tambah</small></div>
+                                <div class='bar-item'><span class='bar-value'>12</span><span class='bar bar-2'></span><small>Pindah</small></div>
+                                <div class='bar-item'><span class='bar-value'>5</span><span class='bar bar-3'></span><small>Meninggal</small></div>
+                                <div class='bar-item'><span class='bar-value'>3</span><span class='bar bar-4'></span><small>Pulihkan</small></div>
+                            </div>
+                            <table class='chart-table'><caption>Alternatif data aktivitas bulan berjalan</caption><thead><tr><th scope='col'>Aktivitas</th><th scope='col'>Jumlah</th></tr></thead><tbody><tr><td>Tambah data</td><td>42</td></tr><tr><td>Pindah</td><td>12</td></tr><tr><td>Meninggal</td><td>5</td></tr><tr><td>Pulihkan</td><td>3</td></tr></tbody></table>
+                        </article>
+                        <div class='context-stack'>
+                            <article class='surface-card leader-card'>
+                                <div class='leader-photo' role='img' aria-label='Fallback foto Kepala Desa'><span aria-hidden='true'>♙</span></div>
+                                <div><p class='eyebrow'>Kepala Desa aktif</p><h3>Belum dikonfigurasi</h3><p>Lengkapi identitas Kepala Desa agar laporan resmi dapat dibuat.</p><a href='#dashboard'>Buka pengaturan <span aria-hidden='true'>→</span></a></div>
+                            </article>
+                            <article class='surface-card notification-card'>
+                                <div class='card-heading'><div><p class='eyebrow'>Notification center</p><h3>Perlu perhatian</h3></div><span class='badge warning'><span aria-hidden='true'>!</span> 2 baru</span></div>
+                                <a href='#dashboard'><span class='notification-icon warning-icon' aria-hidden='true'>!</span><span><strong>KK tanpa kepala keluarga</strong><small>3 Kartu Keluarga perlu diperiksa</small></span><span aria-hidden='true'>›</span></a>
+                                <a href='#dashboard'><span class='notification-icon danger-icon' aria-hidden='true'>×</span><span><strong>Job laporan gagal</strong><small>Periksa ID pekerjaan dan coba kembali</small></span><span aria-hidden='true'>›</span></a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class='gallery-section' id='states' aria-labelledby='states-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>State matrix</p><h2 id='states-title'>Kondisi halaman</h2></div></div>
+                    <div class='state-grid'>
+                        <article class='state-card'><span class='state-symbol spinner' aria-hidden='true'></span><h3>Memuat data</h3><p>Region memakai aria-busy dan ukuran layout tetap stabil.</p></article>
+                        <article class='state-card'><span class='state-symbol' aria-hidden='true'>○</span><h3>Belum ada data</h3><p>Jelaskan data apa yang belum tersedia dan tawarkan aksi sesuai role.</p><button class='button primary small' type='button'>Tambah data</button></article>
+                        <article class='state-card'><span class='state-symbol' aria-hidden='true'>⌕</span><h3>Tidak ada hasil</h3><p>Ubah kata pencarian atau hapus sebagian filter.</p><button class='button secondary small' type='button'>Reset filter</button></article>
+                        <article class='state-card error-state'><span class='state-symbol' aria-hidden='true'>!</span><h3>Terjadi kendala</h3><p>Coba lagi atau catat ID kendala: DEMO-STATE.</p><button class='button secondary small' type='button'>Coba lagi</button></article>
+                    </div>
+                    <article class='surface-card job-card'>
+                        <div class='job-heading'><div><p class='eyebrow'>JOB-PROGRESS</p><h3>Laporan penduduk sedang diproses</h3><p>Halaman ini boleh ditutup. Proses akan tetap berjalan.</p></div><span class='badge primary'><span aria-hidden='true'>↻</span> Diproses</span></div>
+                        <div class='progress-copy'><span>Menyiapkan file PDF</span><strong>64%</strong></div>
+                        <div class='progress-track' role='progressbar' aria-label='Kemajuan laporan' aria-valuemin='0' aria-valuemax='100' aria-valuenow='64'><span></span></div>
+                        <dl class='job-meta'><div><dt>ID pekerjaan</dt><dd>JOB-DEMO-001</dd></div><div><dt>Percobaan</dt><dd>1 dari 3</dd></div><div><dt>Diperbarui</dt><dd>31 Agustus 2026, 10.24 WIB</dd></div></dl>
+                    </article>
+                </section>
+
+                <section class='gallery-section' id='overlays' aria-labelledby='overlays-title'>
+                    <div class='section-heading'><div><p class='eyebrow'>Overlay</p><h2 id='overlays-title'>Dialog, drawer, dan toast</h2></div></div>
+                    <div class='surface-card overlay-demo'><p>Gunakan tombol berikut untuk menguji dialog konfirmasi dan toast. Pada viewport kecil, tombol Filter membuka drawer dengan focus trap.</p><div class='button-row'><button class='button primary' type='button' data-open-modal>Buka dialog</button><button class='button secondary' type='button' data-show-toast>Tampilkan toast</button></div></div>
+                </section>
+            </main>
+            <footer class='app-footer'><span>SIKDES Kota Baru · Gallery v1.1.1</span><span>Development only</span></footer>
+        </div>
+    </div>
+    <aside class='filter-drawer' id='filter-drawer' aria-labelledby='filter-drawer-title' hidden>
+        <div class='drawer-heading'><div><p class='eyebrow'>FILTER-DRAWER</p><h2 id='filter-drawer-title'>Filter penduduk</h2></div><button class='icon-button' id='filter-close' type='button' aria-label='Tutup filter'>×</button></div>
+        <div class='field'><label for='mobile-status'>Status</label><select id='mobile-status'><option>Aktif</option><option>Pindah</option><option>Meninggal</option></select></div>
+        <div class='field'><label for='mobile-rt'>RT</label><select id='mobile-rt'><option>Semua RT</option><option>RT 001</option><option>RT 002</option></select></div>
+        <label class='check-field'><input type='checkbox' checked><span>Belum Masuk KK</span></label>
+        <div class='drawer-actions'><button class='button secondary' type='button'>Reset</button><button class='button primary' type='button' id='filter-apply'>Terapkan filter</button></div>
+    </aside>
+
+    <div class='modal-layer' id='confirm-modal' hidden>
+        <div class='modal-backdrop' data-close-modal></div>
+        <section class='modal-card' role='dialog' aria-modal='true' aria-labelledby='modal-title' aria-describedby='modal-description'>
+            <div class='modal-icon' aria-hidden='true'>!</div>
+            <h2 id='modal-title'>Pindahkan anggota terpilih?</h2>
+            <p id='modal-description'>Membership pada KK asal akan diakhiri dan membership tujuan dibuat dalam satu transaksi. KK asal dapat menjadi tanpa kepala atau nonaktif.</p>
+            <div class='alert warning'><span class='alert-icon' aria-hidden='true'>!</span><div><strong>Dampak operasi</strong><p>Riwayat KK asal tetap disimpan dan tidak dihapus.</p></div></div>
+            <div class='modal-actions'><button class='button secondary' type='button' data-close-modal>Batal</button><button class='button primary' type='button' data-close-modal>Pindahkan anggota</button></div>
+        </section>
+    </div>
+
+    <div class='toast' id='success-toast' role='status' aria-live='polite' hidden>
+        <span class='toast-icon' aria-hidden='true'>✓</span><div><strong>Perubahan tersimpan</strong><p>Data terbaru sudah ditampilkan.</p></div><button class='icon-button' id='toast-close' type='button' aria-label='Tutup notifikasi'>×</button>
+    </div>
+    <script src="gallery.js"></script>
+</body>
+</html>
