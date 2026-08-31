@@ -2,12 +2,12 @@
 
 ## 1. Sasaran dan fondasi yang dikunci
 
-Aplikasi dibangun ulang dari scaffold saat ini menjadi modular monolith berbasis:
+Aplikasi dibangun dari baseline perencanaan saat ini menjadi modular monolith berbasis:
 
 - CodeIgniter 4.7.4, PHP 8.3, MariaDB 11.4, InnoDB, `utf8mb4`, strict mode.
 - Zona waktu aplikasi, database, job, laporan, dan cron: `Asia/Jakarta`; data waktu disimpan sebagai waktu WIB `DATETIME(6)`, tanpa normalisasi UTC.
-- Bootstrap ulang CI4, bukan upgrade in-place dari CI3. Scaffold CI3 saat ini belum berisi modul bisnis dan akan dipertahankan melalui baseline Git sebelum diganti. Pendekatan ini mengikuti panduan resmi migrasi [CI3 ke CI4](https://codeigniter.com/user_guide/installation/upgrade_4xx.html).
-- Server-rendered CI4 dengan Bootstrap, DataTables server-side, Chart.js, Tom Select, Quill, DOMPDF, PhpSpreadsheet, HTMLPurifier, serta fallback `ifsnop/mysqldump-php`.
+- Bootstrap aplikasi CI4 baru dari AppStarter 4.7.4. Workspace awal hanya berisi dokumen perencanaan dan aset logo; tidak ada runtime CI3 yang perlu dimigrasikan.
+- Server-rendered CI4 dengan Bootstrap, DataTables server-side, Chart.js, Tom Select, Trix, DOMPDF, PhpSpreadsheet, HTMLPurifier, serta fallback `ifsnop/mysqldump-php`.
 - Versi dependency PHP/JavaScript dikunci melalui `composer.lock` dan `package-lock.json`; hanya versi stabil yang kompatibel dengan PHP 8.3 dan lolos audit.
 - Single tenant untuk satu desa, sekitar 10.000 penduduk.
 - Bahasa utama Indonesia dan format lokal Indonesia.
@@ -207,7 +207,7 @@ Histori menggunakan valid window dan event:
 - KK baru wajib nomor, alamat, RT, RW; tanggal terbit opsional dan minimal mempunyai satu penduduk baru.
 - KK existing/nonaktif dalam sheet atau mode `NEW` menjadi error.
 - File ditempatkan sementara dalam quarantine. Job wajib membuat dan memverifikasi backup DB sebelum membaca file.
-- Kegagalan backup menghentikan proses dan menghapus file quarantine.
+- Kegagalan backup menghentikan proses. File gagal dipertahankan maksimal tujuh hari untuk diagnosis Admin lalu dihapus otomatis.
 - Semua baris divalidasi; satu error membatalkan seluruh batch.
 - Error menyebut sheet, baris, kolom, nama/NIK terkait, dan instruksi perbaikan dalam bahasa Indonesia.
 - Setelah validasi, seluruh invariant dicek ulang di dalam satu transaksi.
@@ -215,7 +215,7 @@ Histori menggunakan valid window dan event:
 **Queue dan backup**
 
 - Satu queue database dan satu cron setiap menit.
-- Worker: `php spark jobs:work --stop-when-empty --max-runtime=50`.
+- Worker: `php spark queue:work siak -max-time 50 -tries 3 --stop-when-empty`.
 - Job menggunakan lease, advisory lock, idempotency, dan maksimal tiga retry untuk kegagalan transient.
 - Backup database mencoba `mariadb-dump/mysqldump`, lalu fallback PHP.
 - Retensi: empat backup terjadwal sukses terbaru, pre-import 30 hari, manual 90 hari.
@@ -236,7 +236,7 @@ Histori menggunakan valid window dan event:
 **CMS dan portal publik**
 
 - Berita, pengumuman, dan agenda mempunyai status draft/published/withdrawn.
-- Quill hanya mengizinkan format terbatas; HTML selalu disanitasi kembali dengan HTMLPurifier.
+- Trix hanya mengizinkan format terbatas; attachment dinonaktifkan dan HTML selalu disanitasi kembali dengan HTMLPurifier.
 - Statistik publik hanya: penduduk aktif, KK aktif, laki-laki aktif, dan perempuan aktif.
 - Tidak ada drill-down ke data pribadi.
 - Profil desa adalah data terstruktur dari Pengaturan, bukan artikel CMS bebas.
@@ -248,7 +248,7 @@ Histori menggunakan valid window dan event:
 1. Periksa ulang bahwa database existing tidak berisi data produksi. Jika berisi data, bootstrap dihentikan dan dibuat rencana migrasi data khusus.
 2. Buat `.gitignore` untuk `.env`, secret, `vendor`, `node_modules`, cache/log/session, upload privat, impor/ekspor, backup SQL, dan file IDE.
 3. Jalankan `git init -b main`.
-4. Buat baseline commit scaffold CI3, PRD, rekomendasi library, dan logo; beri tag recovery `baseline-ci3-20260831`.
+4. Buat baseline commit PRD, rekomendasi library, rencana eksekusi, `.gitignore`, dan logo; beri tag recovery `baseline-planning-20260831`.
 5. Tambahkan `origin` ke `https://github.com/aulaHamidin/sikdes-cms-kotabaru.git`.
 6. Verifikasi remote tetap kosong sebelum push dan jangan pernah force-push.
 7. Autentikasi GitHub melalui browser memakai `gh auth login -h github.com -w`, lalu verifikasi akun.
@@ -267,7 +267,7 @@ Histori menggunakan valid window dan event:
 
 ### Tahap 2 — Bootstrap CI4 dan shared foundation
 
-- Hapus runtime CI3 setelah aman di baseline Git, lalu buat aplikasi CI4 baru.
+- Buat aplikasi CI4 baru dari AppStarter 4.7.4 di direktori sementara, lalu integrasikan ke root setelah baseline Git aman.
 - Pertahankan dokumen sumber dan logo; logo dipakai sebagai source asset/seed.
 - Bangun environment config, database connection, migrations, error handling, logging, auth filter, role policy, CSRF, security headers, private-file delivery, audit service, encryption/blind index, route registry, layout, asset pipeline, dan CI.
 - Tambahkan `php spark siak:doctor` untuk memeriksa PHP, extension, DB, timezone, path writable, key, cron freshness, dan kemampuan backup.

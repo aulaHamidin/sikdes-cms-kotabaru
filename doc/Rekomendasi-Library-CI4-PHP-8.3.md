@@ -357,7 +357,7 @@ Shared foundation berada pada app/Core, app/Views, dan app/Cells.
 
 ## 7. Perintah Pemasangan
 
-Jalankan bootstrap CI4 di direktori sementara karena root saat ini masih berisi scaffold CI3 dan dokumen sumber.
+Jalankan bootstrap CI4 di direktori sementara karena root saat ini berisi baseline dokumen sumber, component gallery, dan aset logo yang harus dipertahankan.
 
 ~~~bash
 composer create-project codeigniter4/appstarter:4.7.4 ci4-bootstrap
