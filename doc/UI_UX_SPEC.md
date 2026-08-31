@@ -4,7 +4,7 @@
 | --- | --- |
 | Versi | 1.1.1 |
 | Tanggal | 31 Agustus 2026 |
-| Status | Draf tervalidasi; dibekukan setelah pemeriksaan Tahap 1 |
+| Status | Dibekukan untuk implementasi |
 | Acuan produk | `PRD-SIKDES-Kota-Baru-CI4.md` |
 | Acuan teknologi | `Rekomendasi-Library-CI4-PHP-8.3.md` |
 | Bahasa antarmuka | Indonesia |
@@ -12,6 +12,8 @@
 Dokumen ini adalah sumber tunggal untuk sistem visual, komponen, Screen ID, pola interaksi, responsive behavior, state, dan wording antarmuka SIKDES Kota Baru. Aturan bisnis tetap mengikuti PRD. Jika implementasi membutuhkan pola visual baru, spesifikasi ini harus dinaikkan versinya sebelum pola tersebut dipakai oleh modul.
 
 Urutan otoritas adalah PRD, rekomendasi teknologi, spesifikasi ini, implementation plan, lalu source code dan test.
+
+Spesifikasi v1.1.1 dibekukan pada 31 Agustus 2026 setelah visual QA component gallery berstatus lulus pada viewport 320, 768, 1024, dan 1440 px. Bukti, temuan yang diselesaikan sebelum pembekuan, serta hasil walkthrough keyboard tercatat di [`visual-qa/README.md`](visual-qa/README.md).
 
 ## 1. Prinsip pengalaman pengguna
 
@@ -43,7 +45,8 @@ Yang tidak boleh muncul pada rilis awal:
 | `--color-primary-hover` | `#0303CC` | Hover CTA utama; turunan tetap dan tidak mengikuti logo upload |
 | `--color-accent` | `#FFF000` | Aksen singkat, marker, status perhatian; bukan teks panjang atau CTA utama |
 | `--color-success` | `#339967` | Status berhasil/aktif bersama ikon dan label |
-| `--color-danger` | `#FE0000` | Kesalahan dan aksi berisiko bersama ikon dan label |
+| `--color-danger` | `#FE0000` | Token identitas untuk aksen kesalahan, border, ikon, dan visual nonteks sesuai PRD |
+| `--color-danger-strong` | `#CC0000` | Turunan tetap untuk tombol/indikator berisiko dengan teks putih normal; kontras 5,89:1 |
 | `--color-warning-bg` | `#FFF9CC` | Latar peringatan |
 | `--color-canvas` | `#F8FAFC` | Latar aplikasi |
 | `--color-surface` | `#FFFFFF` | Card, sidebar, dialog, form |
@@ -52,7 +55,7 @@ Yang tidak boleh muncul pada rilis awal:
 | `--color-border` | `#CBD5E1` | Border dan divider |
 | `--color-focus` | `#0504FF` | Focus ring 3 px dengan offset 2 px |
 
-Warna status tidak boleh menjadi satu-satunya pembeda. Status menggunakan kombinasi ikon, label teks, dan bentuk badge. Logo baru hanya mengganti identitas visual, tidak mengubah token.
+Warna status tidak boleh menjadi satu-satunya pembeda. Status menggunakan kombinasi ikon, label teks, dan bentuk badge. `--color-danger-strong` adalah varian aksesibilitas tetap dari token danger PRD, bukan pengganti warna identitas `#FE0000`. Logo baru hanya mengganti identitas visual, tidak mengubah token.
 
 ### 2.2 Tipografi
 

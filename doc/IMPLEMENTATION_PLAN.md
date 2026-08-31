@@ -4,7 +4,7 @@
 | --- | --- |
 | Versi | 1.0.0 |
 | Tanggal | 31 Agustus 2026 |
-| Status | Draf tervalidasi; diaktifkan setelah pemeriksaan Tahap 1 |
+| Status | Aktif untuk implementasi |
 | Branch integrasi | `develop` |
 | Branch release | `main` |
 | Kontrak produk | `PRD-SIKDES-Kota-Baru-CI4.md` |
@@ -266,6 +266,7 @@ composer audit --locked
 php vendor/bin/phpunit
 php vendor/bin/phpstan analyse
 
+
 npm ci
 npm audit
 npm run lint
@@ -325,7 +326,7 @@ Auto-deploy baru boleh aktif setelah dua rehearsal berturut-turut berhasil. Rest
 | Generated-key invariant tidak sesuai perilaku MariaDB | Prototype migration dan concurrency test sebelum modul KK dibangun |
 | Snapshot/as-of kompleks | Bangun dataset temporal kecil dan test oracle sebelum report UI |
 | Memory import 10.000 baris | Read filter, `readDataOnly`, batas baris/file, profiling pada limit shared hosting |
-| Remote GitHub/ruleset belum dapat dikonfigurasi | Selesaikan autentikasi dan persetujuan publikasi sebelum Tahap 0 eksternal ditutup |
+| Integrasi melewati branch protection | Ruleset `Protect Develop` dan `Protect Main` aktif; seluruh perubahan masuk melalui feature branch dan pull request |
 
 Checkpoint yang membutuhkan keputusan produk baru hanya dibuat bila implementasi akan mengubah PRD. Kendala library/hosting boleh mengubah detail teknis setelah compatibility, security, license, dan regression review tanpa mengubah aturan bisnis.
 
@@ -333,4 +334,4 @@ Checkpoint yang membutuhkan keputusan produk baru hanya dibuat bila implementasi
 
 Rilis selesai hanya jika seluruh acceptance criteria PRD §17 mempunyai test/evidence, seluruh Screen ID production terimplementasi, dua role dan publik lulus permission matrix, migration/queue/backup/restore bekerja pada staging Hostinger, serta tidak ada known critical/high security issue tanpa keputusan risiko tertulis.
 
-Setelah pemeriksaan Tahap 1 lulus, metadata status dokumen diubah menjadi `Aktif untuk implementasi` tanpa mengubah versi 1.0.0.
+Metadata status dokumen telah diubah menjadi `Aktif untuk implementasi` tanpa mengubah versi 1.0.0 setelah pemeriksaan Tahap 1 lulus pada 31 Agustus 2026.
