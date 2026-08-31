@@ -1,0 +1,824 @@
+{
+  "generatedAt": "2026-08-31T08:03:56.697Z",
+  "url": "http://127.0.0.1:8765/design/component-gallery/",
+  "browser": {
+    "executable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "product": "Edg/152.0.4191.53",
+    "protocol": "1.3"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "mobile-320",
+        "width": 320,
+        "height": 900
+      },
+      "audit": {
+        "screenId": "DEV-COMPONENT-GALLERY",
+        "title": "Component Gallery — SIKDES Kota Baru",
+        "language": "id",
+        "h1Count": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "firstFocusable": "a.skip-link",
+        "pageLayoutWidth": 305,
+        "rootScrollWidth": 490,
+        "viewportWidth": 320,
+        "horizontalOverflow": false,
+        "duplicateIds": [],
+        "externalResources": [],
+        "gradients": [],
+        "overflowingElements": [],
+        "layoutProbes": [
+          {
+            "selector": ".app-column",
+            "left": 0,
+            "right": 305,
+            "width": 305,
+            "scrollWidth": 305,
+            "clientWidth": 305,
+            "overflowX": "visible"
+          },
+          {
+            "selector": "main",
+            "left": 0,
+            "right": 305,
+            "width": 305,
+            "scrollWidth": 305,
+            "clientWidth": 305,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".data-card",
+            "left": 16,
+            "right": 289,
+            "width": 273,
+            "scrollWidth": 271,
+            "clientWidth": 271,
+            "overflowX": "hidden"
+          },
+          {
+            "selector": ".table-wrap",
+            "left": 17,
+            "right": 288,
+            "width": 271,
+            "scrollWidth": 535,
+            "clientWidth": 271,
+            "overflowX": "auto"
+          },
+          {
+            "selector": ".pagination",
+            "left": 17,
+            "right": 288,
+            "width": 271,
+            "scrollWidth": 271,
+            "clientWidth": 271,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".chart-card",
+            "left": 16,
+            "right": 298,
+            "width": 282,
+            "scrollWidth": 280,
+            "clientWidth": 280,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".bar-chart",
+            "left": 37,
+            "right": 277,
+            "width": 240,
+            "scrollWidth": 239,
+            "clientWidth": 239,
+            "overflowX": "visible"
+          }
+        ],
+        "horizontalScrollReach": 0,
+        "unlabeledScrollRegions": [],
+        "unnamedControls": [],
+        "unlabeledFields": [],
+        "undersizedTargets": [],
+        "contrastChecks": [
+          {
+            "selector": ".button.primary",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          },
+          {
+            "selector": ".button.danger",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".notification-count",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".badge.success",
+            "ratio": 6.77,
+            "color": "rgb(22, 101, 52)",
+            "background": "rgb(236, 253, 245)"
+          },
+          {
+            "selector": ".badge.danger",
+            "ratio": 7.6,
+            "color": "rgb(153, 27, 27)",
+            "background": "rgb(254, 242, 242)"
+          },
+          {
+            "selector": ".alert.warning",
+            "ratio": 8.12,
+            "color": "rgb(113, 63, 18)",
+            "background": "rgb(255, 249, 204)"
+          },
+          {
+            "selector": ".side-nav a.active",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          }
+        ],
+        "metricColumns": 1,
+        "javascriptReady": true
+      },
+      "interactions": {
+        "skipLink": {
+          "focused": true,
+          "matchesFocus": true,
+          "documentFocused": true,
+          "visible": true,
+          "target": "#main-content",
+          "top": 12,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "modalOpen": {
+          "hidden": false,
+          "activeText": "Batal",
+          "bodyLocked": true
+        },
+        "modalTrap": {
+          "expected": "Batal",
+          "actual": "Batal"
+        },
+        "modalClose": {
+          "hidden": true,
+          "returnFocus": "modal-trigger"
+        },
+        "toast": {
+          "shown": true,
+          "closed": true
+        },
+        "sidebarOpen": {
+          "open": true,
+          "expanded": "true",
+          "focus": "sidebar-close"
+        },
+        "sidebarTrap": {
+          "expected": "□ Overlay",
+          "actual": "□ Overlay"
+        },
+        "sidebarClose": {
+          "open": false,
+          "expanded": "false",
+          "returnFocus": "sidebar-open"
+        },
+        "filterOpen": {
+          "hidden": false,
+          "expanded": "true",
+          "focus": "filter-close"
+        },
+        "filterTrap": {
+          "expected": "filter-close",
+          "actual": "filter-close"
+        },
+        "filterClose": {
+          "hidden": true,
+          "expanded": "false",
+          "returnFocus": "filter-trigger"
+        },
+        "rowNavigation": "#data",
+        "loadingButton": {
+          "disabled": true,
+          "loading": true,
+          "text": "Memproses…"
+        },
+        "loadingReset": {
+          "disabled": false,
+          "loading": false,
+          "text": "Uji loading"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "spinnerDuration": "1e-05s",
+          "sidebarTransition": "1e-05s"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "name": "tablet-768",
+        "width": 768,
+        "height": 900
+      },
+      "audit": {
+        "screenId": "DEV-COMPONENT-GALLERY",
+        "title": "Component Gallery — SIKDES Kota Baru",
+        "language": "id",
+        "h1Count": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "firstFocusable": "a.skip-link",
+        "pageLayoutWidth": 753,
+        "rootScrollWidth": 753,
+        "viewportWidth": 768,
+        "horizontalOverflow": false,
+        "duplicateIds": [],
+        "externalResources": [],
+        "gradients": [],
+        "overflowingElements": [],
+        "layoutProbes": [
+          {
+            "selector": ".app-column",
+            "left": 0,
+            "right": 753,
+            "width": 753,
+            "scrollWidth": 753,
+            "clientWidth": 753,
+            "overflowX": "visible"
+          },
+          {
+            "selector": "main",
+            "left": 0,
+            "right": 753,
+            "width": 753,
+            "scrollWidth": 753,
+            "clientWidth": 753,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".data-card",
+            "left": 24,
+            "right": 729,
+            "width": 705,
+            "scrollWidth": 703,
+            "clientWidth": 703,
+            "overflowX": "hidden"
+          },
+          {
+            "selector": ".table-wrap",
+            "left": 25,
+            "right": 728,
+            "width": 703,
+            "scrollWidth": 703,
+            "clientWidth": 703,
+            "overflowX": "auto"
+          },
+          {
+            "selector": ".pagination",
+            "left": 25,
+            "right": 728,
+            "width": 703,
+            "scrollWidth": 703,
+            "clientWidth": 703,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".chart-card",
+            "left": 24,
+            "right": 729,
+            "width": 705,
+            "scrollWidth": 703,
+            "clientWidth": 703,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".bar-chart",
+            "left": 45,
+            "right": 708,
+            "width": 663,
+            "scrollWidth": 662,
+            "clientWidth": 662,
+            "overflowX": "visible"
+          }
+        ],
+        "horizontalScrollReach": 0,
+        "unlabeledScrollRegions": [],
+        "unnamedControls": [],
+        "unlabeledFields": [],
+        "undersizedTargets": [],
+        "contrastChecks": [
+          {
+            "selector": ".button.primary",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          },
+          {
+            "selector": ".button.danger",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".notification-count",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".badge.success",
+            "ratio": 6.77,
+            "color": "rgb(22, 101, 52)",
+            "background": "rgb(236, 253, 245)"
+          },
+          {
+            "selector": ".badge.danger",
+            "ratio": 7.6,
+            "color": "rgb(153, 27, 27)",
+            "background": "rgb(254, 242, 242)"
+          },
+          {
+            "selector": ".alert.warning",
+            "ratio": 8.12,
+            "color": "rgb(113, 63, 18)",
+            "background": "rgb(255, 249, 204)"
+          },
+          {
+            "selector": ".side-nav a.active",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          }
+        ],
+        "metricColumns": 2,
+        "javascriptReady": true
+      },
+      "interactions": {
+        "skipLink": {
+          "focused": true,
+          "matchesFocus": true,
+          "documentFocused": true,
+          "visible": true,
+          "target": "#main-content",
+          "top": 12,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "modalOpen": {
+          "hidden": false,
+          "activeText": "Batal",
+          "bodyLocked": true
+        },
+        "modalTrap": {
+          "expected": "Batal",
+          "actual": "Batal"
+        },
+        "modalClose": {
+          "hidden": true,
+          "returnFocus": "modal-trigger"
+        },
+        "toast": {
+          "shown": true,
+          "closed": true
+        },
+        "sidebarOpen": {
+          "open": true,
+          "expanded": "true",
+          "focus": "sidebar-close"
+        },
+        "sidebarTrap": {
+          "expected": "□ Overlay",
+          "actual": "□ Overlay"
+        },
+        "sidebarClose": {
+          "open": false,
+          "expanded": "false",
+          "returnFocus": "sidebar-open"
+        },
+        "filterOpen": {
+          "hidden": false,
+          "expanded": "true",
+          "focus": "filter-close"
+        },
+        "filterTrap": {
+          "expected": "filter-close",
+          "actual": "filter-close"
+        },
+        "filterClose": {
+          "hidden": true,
+          "expanded": "false",
+          "returnFocus": "filter-trigger"
+        },
+        "rowNavigation": "#data",
+        "loadingButton": {
+          "disabled": true,
+          "loading": true,
+          "text": "Memproses…"
+        },
+        "loadingReset": {
+          "disabled": false,
+          "loading": false,
+          "text": "Uji loading"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "spinnerDuration": "1e-05s",
+          "sidebarTransition": "1e-05s"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1024",
+        "width": 1024,
+        "height": 900
+      },
+      "audit": {
+        "screenId": "DEV-COMPONENT-GALLERY",
+        "title": "Component Gallery — SIKDES Kota Baru",
+        "language": "id",
+        "h1Count": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "firstFocusable": "a.skip-link",
+        "pageLayoutWidth": 1009,
+        "rootScrollWidth": 1009,
+        "viewportWidth": 1024,
+        "horizontalOverflow": false,
+        "duplicateIds": [],
+        "externalResources": [],
+        "gradients": [],
+        "overflowingElements": [],
+        "layoutProbes": [
+          {
+            "selector": ".app-column",
+            "left": 280,
+            "right": 1009,
+            "width": 729,
+            "scrollWidth": 729,
+            "clientWidth": 729,
+            "overflowX": "visible"
+          },
+          {
+            "selector": "main",
+            "left": 280,
+            "right": 1009,
+            "width": 729,
+            "scrollWidth": 729,
+            "clientWidth": 729,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".data-card",
+            "left": 312,
+            "right": 977,
+            "width": 665,
+            "scrollWidth": 663,
+            "clientWidth": 663,
+            "overflowX": "hidden"
+          },
+          {
+            "selector": ".table-wrap",
+            "left": 313,
+            "right": 976,
+            "width": 663,
+            "scrollWidth": 663,
+            "clientWidth": 663,
+            "overflowX": "auto"
+          },
+          {
+            "selector": ".pagination",
+            "left": 313,
+            "right": 976,
+            "width": 663,
+            "scrollWidth": 663,
+            "clientWidth": 663,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".chart-card",
+            "left": 312,
+            "right": 977,
+            "width": 665,
+            "scrollWidth": 663,
+            "clientWidth": 663,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".bar-chart",
+            "left": 333,
+            "right": 956,
+            "width": 623,
+            "scrollWidth": 622,
+            "clientWidth": 622,
+            "overflowX": "visible"
+          }
+        ],
+        "horizontalScrollReach": 0,
+        "unlabeledScrollRegions": [],
+        "unnamedControls": [],
+        "unlabeledFields": [],
+        "undersizedTargets": [],
+        "contrastChecks": [
+          {
+            "selector": ".button.primary",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          },
+          {
+            "selector": ".button.danger",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".notification-count",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".badge.success",
+            "ratio": 6.77,
+            "color": "rgb(22, 101, 52)",
+            "background": "rgb(236, 253, 245)"
+          },
+          {
+            "selector": ".badge.danger",
+            "ratio": 7.6,
+            "color": "rgb(153, 27, 27)",
+            "background": "rgb(254, 242, 242)"
+          },
+          {
+            "selector": ".alert.warning",
+            "ratio": 8.12,
+            "color": "rgb(113, 63, 18)",
+            "background": "rgb(255, 249, 204)"
+          },
+          {
+            "selector": ".side-nav a.active",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          }
+        ],
+        "metricColumns": 4,
+        "javascriptReady": true
+      },
+      "interactions": {
+        "skipLink": {
+          "focused": true,
+          "matchesFocus": true,
+          "documentFocused": true,
+          "visible": true,
+          "target": "#main-content",
+          "top": 12,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "modalOpen": {
+          "hidden": false,
+          "activeText": "Batal",
+          "bodyLocked": true
+        },
+        "modalTrap": {
+          "expected": "Batal",
+          "actual": "Batal"
+        },
+        "modalClose": {
+          "hidden": true,
+          "returnFocus": "modal-trigger"
+        },
+        "toast": {
+          "shown": true,
+          "closed": true
+        },
+        "rowNavigation": "#data",
+        "loadingButton": {
+          "disabled": true,
+          "loading": true,
+          "text": "Memproses…"
+        },
+        "loadingReset": {
+          "disabled": false,
+          "loading": false,
+          "text": "Uji loading"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "spinnerDuration": "1e-05s",
+          "sidebarTransition": "1e-05s"
+        }
+      }
+    },
+    {
+      "viewport": {
+        "name": "desktop-1440",
+        "width": 1440,
+        "height": 1000
+      },
+      "audit": {
+        "screenId": "DEV-COMPONENT-GALLERY",
+        "title": "Component Gallery — SIKDES Kota Baru",
+        "language": "id",
+        "h1Count": 1,
+        "landmarks": {
+          "header": true,
+          "nav": true,
+          "main": true,
+          "footer": true
+        },
+        "firstFocusable": "a.skip-link",
+        "pageLayoutWidth": 1425,
+        "rootScrollWidth": 1425,
+        "viewportWidth": 1440,
+        "horizontalOverflow": false,
+        "duplicateIds": [],
+        "externalResources": [],
+        "gradients": [],
+        "overflowingElements": [],
+        "layoutProbes": [
+          {
+            "selector": ".app-column",
+            "left": 280,
+            "right": 1425,
+            "width": 1145,
+            "scrollWidth": 1145,
+            "clientWidth": 1145,
+            "overflowX": "visible"
+          },
+          {
+            "selector": "main",
+            "left": 280,
+            "right": 1425,
+            "width": 1145,
+            "scrollWidth": 1145,
+            "clientWidth": 1145,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".data-card",
+            "left": 312,
+            "right": 1393,
+            "width": 1081,
+            "scrollWidth": 1079,
+            "clientWidth": 1079,
+            "overflowX": "hidden"
+          },
+          {
+            "selector": ".table-wrap",
+            "left": 313,
+            "right": 1392,
+            "width": 1079,
+            "scrollWidth": 1079,
+            "clientWidth": 1079,
+            "overflowX": "auto"
+          },
+          {
+            "selector": ".pagination",
+            "left": 313,
+            "right": 1392,
+            "width": 1079,
+            "scrollWidth": 1079,
+            "clientWidth": 1079,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".chart-card",
+            "left": 312,
+            "right": 951,
+            "width": 639,
+            "scrollWidth": 637,
+            "clientWidth": 637,
+            "overflowX": "visible"
+          },
+          {
+            "selector": ".bar-chart",
+            "left": 333,
+            "right": 930,
+            "width": 597,
+            "scrollWidth": 596,
+            "clientWidth": 596,
+            "overflowX": "visible"
+          }
+        ],
+        "horizontalScrollReach": 0,
+        "unlabeledScrollRegions": [],
+        "unnamedControls": [],
+        "unlabeledFields": [],
+        "undersizedTargets": [],
+        "contrastChecks": [
+          {
+            "selector": ".button.primary",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          },
+          {
+            "selector": ".button.danger",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".notification-count",
+            "ratio": 5.89,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(204, 0, 0)"
+          },
+          {
+            "selector": ".badge.success",
+            "ratio": 6.77,
+            "color": "rgb(22, 101, 52)",
+            "background": "rgb(236, 253, 245)"
+          },
+          {
+            "selector": ".badge.danger",
+            "ratio": 7.6,
+            "color": "rgb(153, 27, 27)",
+            "background": "rgb(254, 242, 242)"
+          },
+          {
+            "selector": ".alert.warning",
+            "ratio": 8.12,
+            "color": "rgb(113, 63, 18)",
+            "background": "rgb(255, 249, 204)"
+          },
+          {
+            "selector": ".side-nav a.active",
+            "ratio": 8.51,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(5, 4, 255)"
+          }
+        ],
+        "metricColumns": 4,
+        "javascriptReady": true
+      },
+      "interactions": {
+        "skipLink": {
+          "focused": true,
+          "matchesFocus": true,
+          "documentFocused": true,
+          "visible": true,
+          "target": "#main-content",
+          "top": 12,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "modalOpen": {
+          "hidden": false,
+          "activeText": "Batal",
+          "bodyLocked": true
+        },
+        "modalTrap": {
+          "expected": "Batal",
+          "actual": "Batal"
+        },
+        "modalClose": {
+          "hidden": true,
+          "returnFocus": "modal-trigger"
+        },
+        "toast": {
+          "shown": true,
+          "closed": true
+        },
+        "rowNavigation": "#data",
+        "loadingButton": {
+          "disabled": true,
+          "loading": true,
+          "text": "Memproses…"
+        },
+        "loadingReset": {
+          "disabled": false,
+          "loading": false,
+          "text": "Uji loading"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "spinnerDuration": "1e-05s",
+          "sidebarTransition": "1e-05s"
+        }
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "runtimeErrors": [],
+  "failedRequests": [],
+  "failures": [],
+  "passed": true
+}

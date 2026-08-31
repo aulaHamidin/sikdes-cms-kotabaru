@@ -12,6 +12,16 @@ php -S 127.0.0.1:8765 -t .
 
 Lalu buka `http://127.0.0.1:8765/design/component-gallery/`.
 
+## Visual QA
+
+Dengan static server tetap aktif, jalankan dari root proyek:
+
+```powershell
+node design/component-gallery/visual-qa.mjs
+```
+
+Runner tanpa dependency npm ini memakai Microsoft Edge atau Google Chrome lokal untuk menguji viewport 320, 768, 1024, dan 1440 px, interaksi keyboard, focus trap/return, target 44×44 px, kontras komponen utama, reflow, reduced motion, resource eksternal, serta error browser. Bukti ditulis ke `doc/visual-qa/`.
+
 ## Batas penggunaan
 
 - Artefak ini bukan view production dan tidak memuat aturan bisnis.

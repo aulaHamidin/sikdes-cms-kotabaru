@@ -15,8 +15,8 @@
 - Repository lokal dibuat pada `main`.
 - Baseline dokumen/aset dibuat dan diberi recovery tag.
 - Branch integrasi lokal `develop` dibuat.
-- Remote `https://github.com/aulaHamidin/sikdes-cms-kotabaru.git` dapat dijangkau dan tidak mempunyai ref saat diverifikasi.
-- Push, default branch GitHub, dan ruleset belum dijalankan karena autentikasi `gh` tidak valid dan publikasi eksternal membutuhkan persetujuan eksplisit atas tujuan/payload.
+- Remote publik `https://github.com/aulaHamidin/sikdes-cms-kotabaru.git` mempunyai branch `main`, branch `develop`, dan recovery tag `baseline-planning-20260831`.
+- Default branch GitHub adalah `main`; ruleset `Protect Main` dan `Protect Develop` berstatus aktif dan mewajibkan alur pull request serta melindungi branch dari penghapusan/non-fast-forward.
 
 ## Verifikasi runtime
 
@@ -41,14 +41,20 @@
 
 - `node --check design/component-gallery/gallery.js`: lulus.
 - HTML dapat diparse; 50 ID unik; seluruh asset lokal ditemukan.
-- CSS mempunyai 249 opening dan 249 closing braces.
+- CSS mempunyai jumlah opening dan closing braces yang seimbang setelah koreksi visual QA.
 - Seluruh 47 Screen ID pada rencana sumber tercakup; UI spec mempunyai 48 ID termasuk `DEV-COMPONENT-GALLERY`.
 - Static server mengembalikan HTTP 200 untuk HTML, CSS, dan JavaScript serta memuat `data-screen-id` yang benar.
 - Marker draf dan konflik `jobs:work`, tag baseline CI3, serta asumsi scaffold CI3 tidak ditemukan.
 - `git diff --check`: lulus; peringatan line-ending Windows bukan whitespace error.
+- Visual QA Microsoft Edge `152.0.4191.53`: lulus pada 320, 768, 1024, dan 1440 px; tidak ada error console/JavaScript/request, page overflow, target sentuh di bawah 44×44 px, atau region scroll tanpa nama aksesibel.
+- Marker kesiapan JavaScript, overflow di luar region scroll berlabel, dan page-level layout kini menjadi assertion runner; seluruh viewport lulus.
+- Token identitas danger `#FE0000` tetap mengikuti PRD, sedangkan varian tetap `#CC0000` dipakai pada permukaan dengan teks putih untuk mencapai kontras 5,89:1.
+- Walkthrough keyboard untuk skip link, modal, navigation drawer, filter drawer, Escape, focus trap, focus return, row navigation, toast, dan state loading: lulus.
+- Bukti screenshot penuh, overlay, contact sheet, dan hasil machine-readable tersedia di `doc/visual-qa/`.
+- `UI_UX_SPEC.md` v1.1.1 dibekukan dengan status `Dibekukan untuk implementasi` setelah gate visual QA lulus.
 
 ## Checkpoint terbuka
 
-1. Visual QA melalui in-app browser belum mendapat evidence karena helper sandbox Windows gagal membentuk sesi browser setelah Git diinisialisasi. Struktur, sintaks, asset, server response, dan interaksi source sudah diverifikasi; screenshot desktop/mobile dan walkthrough interaktif tetap diperlukan sebelum status UI/UX dibekukan.
-2. Push `main`, recovery tag, dan `develop`, serta konfigurasi default branch/ruleset GitHub menunggu autentikasi dan persetujuan eksplisit publikasi.
-3. MariaDB 11.4 dan timezone aplikasi/database menjadi preflight wajib Tahap 2.
+1. MariaDB 11.4 dan timezone aplikasi/database menjadi preflight wajib Tahap 2.
+
+Koneksi in-app browser tetap gagal dibentuk karena helper sandbox Windows. Checkpoint visual ditutup melalui fallback Microsoft Edge lokal berbasis Chromium dengan screenshot render nyata dan input keyboard browser; detail transparansi eksekusi tersedia di `doc/visual-qa/README.md`.

@@ -18,7 +18,7 @@
     var activePanel = null;
     var returnFocus = null;
     var toastTimer = null;
-    var focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex=-1])';
+    var focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
     function focusableElements(container) {
         return Array.prototype.slice.call(container.querySelectorAll(focusableSelector)).filter(function (element) {
@@ -194,4 +194,6 @@
             first.focus();
         }
     });
+
+    document.documentElement.dataset.javascriptReady = 'true';
 }());
